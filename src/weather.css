@@ -1,0 +1,152 @@
+/****************HTML ELEMENTS****************/
+body {
+  color:#DF3D82;
+  background-color: #191919;
+  font-size: 250%;
+  font-family: 'Poiret One', cursive;
+  font-weight:bolder;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+header {
+  margin-top: 10%;
+}
+
+
+/********************ID'S*********************/
+#temp {
+  font-family: 'Poiret One', cursive;
+  font-size: 400%;
+  font-weight: bold;
+}
+
+#showFiveDay {
+  display:none;
+  border:none;
+}
+#fahrenheit, #celsius {
+  color: #000000;
+
+  font-weight: bolder;
+}
+#fahrenheit:hover, #celsius:hover, #fahrenheit:active, #celsius:active, #fahrenheit:focus, #celsius:focus {
+  outline: none;
+}
+
+#city {
+  font-size: 2.5vh;
+  color:#DF3D82;
+  background-color: #191919;
+  font-weight: bold;
+  border-color:#DF3D82; ;
+}
+#city:focus {
+  border-color:#DF3D82;
+  background-color: #191919;
+}
+
+#forecastContainer {
+  padding: 0;
+  margin: 0;
+}
+#forecastContainerFullPage {
+  display:none;
+  padding:0;
+  margin:0;
+  width: 100%;
+  height:100%;
+}
+#main {
+  border: double #DF3D82 .5vw;
+  font-weight:bolder;
+  color:#DF3D82;
+  background-color: #191919;
+  border-radius: 25%;
+  margin-top: 5%;
+  margin-right:15%;
+  margin-left:15%;
+}
+
+#citySearch:visited,
+#citySearch:active,
+#citySearch:focus,
+#citySearch:hover {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+#back, #showFiveDay {
+  border:solid #FFFFFF .25vw;
+  font-weight:bolder;
+  color: #DF3D82;
+  background-color: #191919;
+}
+/*******************CLASSES*******************/
+
+.fiveDay {
+  width: 100%;
+}
+
+.fiveDay tr {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.dayOne,
+.dayTwo,
+.dayThree,
+.dayFour,
+.dayFive {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.fiveDayblock {
+  width: 100%;
+  height: 50%;
+}
+
+
+.hidden {
+  display:none;
+}
+.fiveFull {
+  height:15vh;
+  width:100vw;
+  padding-top: 5vh;
+  border-bottom: solid #9d7e92 1vh;
+}
+
+@media only screen and (min-width: 240px) and (max-width: 683px) and (min-resolution: 1dppx) {
+  body {
+    margin:0;
+    padding-top:0;
+  }
+  #header, div.input-group.stylish-input-group {
+    margin-top:1vh;
+    padding-top:0;
+  }
+  #main {
+    padding-top:1vh;
+    padding-bottom:1vh;
+    margin-top:0;
+    color:#DF3D82;
+    border:none;
+    background-color:transparent;
+  }
+  #fahrenheit, #celsius {
+    margin-bottom:0;
+  }
+  #forecastContainer {
+    display:none;
+  }
+  #forecastContainerFullPage {
+    display:inline-block;
+  }
+  #showFiveDay {
+    display:inline-block;
+    border-color: #FFFFFF;
+  }
+  footer {
+    margin-top: 4vh;
+  }
+}
