@@ -1,4 +1,15 @@
 /****************HTML ELEMENTS****************/
+.loadingMsg {
+  color:#DF3D82;
+  text-align: center;
+  font-size: 200%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin-right: 25%;
+  margin-left: 25%;
+}
 body {
   color:#DF3D82;
   background-color: #191919;
@@ -11,7 +22,6 @@ body {
 header {
   margin-top: 10%;
 }
-
 
 /********************ID'S*********************/
 #temp {
@@ -26,7 +36,6 @@ header {
 }
 #fahrenheit, #celsius {
   color: #000000;
-
   font-weight: bolder;
 }
 #fahrenheit:hover, #celsius:hover, #fahrenheit:active, #celsius:active, #fahrenheit:focus, #celsius:focus {

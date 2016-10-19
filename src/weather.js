@@ -54,7 +54,8 @@ $(document).ready(function() {
     });
     $('#condition').html(JSON.stringify(currentCondition).replace(/[^A-Za-z0-9]/g, ' '));
     $('#humidity').html(JSON.stringify(currentHumidity)).append('% humidity');
-    $('body').removeClass('hidden');
+    $('.loadingMsg').addClass('hidden');
+    $('#header, #main, #forecastContainer, #showFiveDay, footer').removeClass('hidden');
   }
 
   // five day info function ---------------------------------------
@@ -180,11 +181,14 @@ $(document).ready(function() {
           })
           // call for city specific 5 day forecast 
       };
-      $('#city').keydown(function(e){
-    if (e.keyCode === 13) { // If Enter key pressed
-        citySpecificWeather();
-    }
-});
+
+
+      $('#city').keydown(function(e) {
+        if (e.keyCode === 13) { // If Enter key pressed
+          citySpecificWeather();
+        }
+      });
+
       // on submit event for retrieving the city specific weather and forecast
       $('#citySearch').on('click', function(e) {
         e.preventDefault();
@@ -192,8 +196,10 @@ $(document).ready(function() {
         citySpecificWeather();
       })
     });
-  } else {
-    $('body').removeClass('hidden');
+  }
+  else {
+    $('.loadingMsg').addClass('hidden');
+    $('#header, #main, #forecastContainer, #showFiveDay, footer').removeClass('hidden');
     function citySpecificWeather() {
       var currentUrl = 'http://api.openweathermap.org/data/2.5/weather?';
       var forecastUrl = 'http://api.openweathermap.org/data/2.5/forecast?';
