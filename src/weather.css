@@ -35,11 +35,16 @@ header {
   border:none;
 }
 #fahrenheit, #celsius {
-  color: #000000;
   font-weight: bolder;
+  color: #DF3D82;
+  background-color: #191919;
+  border-color: #DF3D82;
 }
 #fahrenheit:hover, #celsius:hover, #fahrenheit:active, #celsius:active, #fahrenheit:focus, #celsius:focus {
   outline: none;
+  color: #191919;
+  background-color: #DF3D82;
+  border-color: #DF3D82;
 }
 
 #city {
@@ -47,9 +52,9 @@ header {
   color:#DF3D82;
   background-color: #191919;
   font-weight: bold;
-  border-color:#DF3D82; ;
+  border-color:#DF3D82;
 }
-#city:focus {
+#city:focus, #city:active {
   border-color:#DF3D82;
   background-color: #191919;
 }
@@ -83,6 +88,16 @@ header {
   border: none;
   outline: none;
   text-decoration: none;
+  background-color: #191919;
+  color:#DF3D82;
+}
+.input-group-addon {
+  border-color: #DF3D82;
+}
+.input-group-addon,
+.glyphicon-search {
+  background-color: #191919;
+  color: #DF3D82;
 }
 #back, #showFiveDay {
   border:solid #FFFFFF .25vw;
