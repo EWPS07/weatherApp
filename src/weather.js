@@ -109,9 +109,9 @@ $(document).ready(function() {
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var currentUrl = 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?';
+      var currentUrl = 'https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?';
       //var crossOriginAddon = 'https://crossorigin.me/';
-      var forecastUrl = 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/forecast?';
+      var forecastUrl = 'https://crossorigin.me/https://api.openweathermap.org/data/2.5/forecast?';
       var lon = '&lon=' + position.coords.longitude;
       var lat = '&lat=' + position.coords.latitude;
       var units = '&units=imperial';
@@ -155,8 +155,8 @@ $(document).ready(function() {
 
       // function for city specific current weather and 5 day forecast
       function citySpecificWeather() {
-        var currentUrl = 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?';
-        var forecastUrl = 'https://crossorigin.me/http://api.openweathermap.org/data/2.5/forecast?';
+        var currentUrl = 'https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?';
+        var forecastUrl = 'https://crossorigin.me/https://api.openweathermap.org/data/2.5/forecast?';
         var units = '&units=imperial';
         var apiKey = '&APPID=34dd8ef89cc4a71e5ca4695bef3da4e2';
         var city = 'q=' + $('#city').val();
@@ -179,7 +179,7 @@ $(document).ready(function() {
               populateFiveDay();
             });
           })
-          // call for city specific 5 day forecast 
+          // call for city specific 5 day forecast
       };
 
 
@@ -201,8 +201,8 @@ $(document).ready(function() {
     $('.loadingMsg').addClass('hidden');
     $('#header, #main, #forecastContainer, #showFiveDay, footer').removeClass('hidden');
     function citySpecificWeather() {
-      var currentUrl = 'http://api.openweathermap.org/data/2.5/weather?';
-      var forecastUrl = 'http://api.openweathermap.org/data/2.5/forecast?';
+      var currentUrl = 'https://api.openweathermap.org/data/2.5/weather?';
+      var forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?';
       var units = '&units=imperial';
       var apiKey = '&APPID=34dd8ef89cc4a71e5ca4695bef3da4e2';
       var city = 'q=' + $('#city').val();
@@ -215,7 +215,7 @@ $(document).ready(function() {
         populateMainInfo();
       });
 
-      // call for city specific 5 day forecast 
+      // call for city specific 5 day forecast
       $.getJSON(forecastUrl + city + units + apiKey, function(json) {
         dayOne = json.list[0];
         dayTwo = json.list[8];
@@ -230,7 +230,7 @@ $(document).ready(function() {
       citySpecificWeather();
     })
   }
-  
+
   $('#showFiveDay').click(function() {
     $('#header, #main, #forecastContainer, #showFiveDay, footer').addClass('hidden');
     $('#forecastContainerFullPage').removeClass('hidden');
